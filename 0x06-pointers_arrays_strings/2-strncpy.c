@@ -14,6 +14,7 @@ for (a = 0; *(dest + a) != '\0'; a++)
 }
 for (b = 0; *(src + b) != '\0'; b++)
 {
+}
 for (c = 0; c < n && c < b; c++)
 {
 *(dest + c) = *(src + c);
