@@ -11,6 +11,7 @@ int a = 0, b = 0, c = 0, r = 0, lim;
 while (s1[a])
 {
 a++;
+}
 while (s2[b])
 {
 b++;
