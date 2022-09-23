@@ -16,7 +16,7 @@ j = 0;
 while (alpha[j] != '\0')
 {
 if (str[i] == alpha[j])
-{	
+{
 str[i] = rot[j];
 break;
 }
