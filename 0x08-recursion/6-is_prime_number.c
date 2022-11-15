@@ -1,44 +1,51 @@
 #include "main.h"
-int lengthc(char *s);
-int palindrome(char str[], int st, int end);
 /**
- *is_palindrome - Entry Point
- *@s: input
- *Return: 0
+ * is_prime_number - determine if a number is a prime number
+ * @n: int number
+ * Return: 1 if prime, 0 otherwise
  */
-int is_palindrome(char *s)
+int is_prime_number(int n)
 {
-int len;
-len = lengthc(s);
-if (len == 0)
-return (1);
-return (palindrome(s, 0, len - 1));
-}
-/**
- *lengthc - finds the length count
- *@s: input
- *Return: length size
- **/
-int lengthc(char *s)
+int prime_number(int divider, int n);
+int divider = 2;
+if (n < 2)
 {
-if (*s != '\0')
-return (1 + lengthc(s + 1));
 return (0);
 }
-/**
- *palindrome - checks if start and end of string matches
- *@str: string
- *@st: start of string 0
- *@end: end of string from is_palindrome, from lengthc
- *Return: if str is a palindrome
- */
-int palindrome(char str[], int st, int end)
+if (n % n == 0 || n % 1 == 0)
 {
-if (st >= end)
+if (prime_number(divider, n) != 0)
+{
 return (1);
-if (str[st] != str[end])
+}
+else
+{
 return (0);
-if (st <= end || st < end + 1)
-return (palindrome(str, st + 1, end - 1));
+}
+}
+}
+/**
+ * prime_number - helper function, recursive steps taken
+ * @n: number given to original function is_prime_number
+ * @divider: incrementer divisor
+ * Return: 0 if not prime, 1 if prime
+ */
+int prime_number(int divider, int n)
+{
+if (divider < n)
+{
+if (n % divider == 0)
+{
+return (0);
+}
+else
+{
+++divider;
+return (prime_number(divider, n));
+}
+}
+else
+{
 return (1);
+}
 }
