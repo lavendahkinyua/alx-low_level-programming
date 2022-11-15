@@ -7,7 +7,7 @@
 int is_palindrome(char *s)
 {
 int get_length(char *s);
-int my_pal(char *s, int l)
+int my_pal(char *s, int l);
 int length;
 length = get_length(s) - 1;
 return (my_pal(s, --length));
